@@ -1,0 +1,169 @@
+<!doctype html><html lang="en"><head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	<title>Facebook analysis</title>
+	<style media="screen">
+	.bg{
+	background-color: #3b5998;
+	}
+	.form-rounded {
+	border-radius: 1rem;
+	}
+	/* enable absolute positioning */
+	.inner-addon {
+	position: relative;
+	}
+	/* style icon */
+	.inner-addon .fa {
+	position: absolute;
+	padding: 10px;
+	pointer-events: none;
+	}
+	/* align icon */
+	.left-addon .fa  { left:  0px;}
+	.right-addon .fa { right: 0px;}
+	/* add padding  */
+	.left-addon input  { padding-left:  30px; }
+	.right-addon input { padding-right: 30px; }
+	.button {
+	color: #fff !important;
+	text-transform: uppercase;
+	text-decoration: none;
+	background:  #3b5998;
+	padding: 10px;
+	width: 210px;
+	border-radius: 50px;
+	display: inline-block;
+	border: none;
+	transition: all 0.4s ease 0s;
+	}
+	.button:hover {
+	background: #434343;
+	letter-spacing: 3px;
+	-webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+	-moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+	box-shadow: 5px 40px -10px rgba(0,0,0,0.57);
+	transition: all 0.4s ease 0s;
+	}
+	</style>
+</head>
+<body class="bg">
+	<header class="navbar navbar-expand-lg navbar-inverse bg-dark">
+		<div class="container">
+			<a href="{% url 'index:home' %}" class="navbar-brand navbar-left">
+				<i class="fa fa-facebook" style="font-size:22px"></i>&nbsp;Facebook Analysis
+			</a>
+			<ul class="nav nav navbar-right">
+				<li class="nav-item">
+					<a href="{% url 'index:home' %}" class="nav-link">Home <span class="fa fa-home"></span></a>
+				</li>
+				<li class="nav-item">
+					<a href="{% url 'index:about' %}" class="nav-link">About us&nbsp;<span class="fa fa-globe"></span></a>
+				</li>
+				<li class="nav-item">
+					<a href="https://www.google.com/" target="_blank" class="nav-link">Google
+						<span class="fa fa-search"></span>
+					</a>
+				</li>
+				<span>&nbsp;&nbsp;</span>
+				<li class="nav-item">
+					<a href="https://www.twitter.com/" target="_blank" class="nav-link">Twitter
+						<span class="fa fa-twitter"></span>
+					</a>
+				</li>
+				<span>&nbsp;&nbsp;</span>
+				<li class="nav-item">
+					<a href="https://www.instagram.com/" target="_blank" class="nav-link">Instagram
+						<span class="fa fa-instagram"></span>
+					</a>
+				</li>
+				<span>&nbsp;&nbsp;</span>
+				<li class="nav-item">
+					<a href="https://www.facebook.com/" class="nav-link">Facebook
+						<span class="fa fa-facebook"></span>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</header>
+	<div class="well">
+		<h1 align="center">Facebool Analysis</h1>
+	</div>
+	<div class="container" align="center">
+		<div class="jumbotron container" style="box-sizing: border-box;">
+			<div class="wrap">
+				<div class="row justify-content-center align-items-center">
+					<form class="form-horizontal  justify-content-center align-items-center" >
+						<div class="form-row">
+							<div class="inner-addon left-addon">
+								<i class="fa fa-hashtag"></i>
+								<input type="text" class="form-control form-rounded"  name="hash" id="hash" placeholder="Hashtag" required/>
+							</div>
+						</div>
+						<br>
+						<div class="form-row">
+							<div class="inner-addon left-addon">
+								<i class="fa fa-comments-o"></i>
+								<input type="text" class="form-control form-rounded" name="number" id="number" placeholder="Number of comments" required/>
+							</div>
+						</div>
+						<br>
+						<div class="button_cont" align="left">
+							<button class="button" name="submit" id="submit">Search</button>
+						</div>
+					</form>
+				</div>
+				<br>
+				<table border="1" class="table table-hover">
+					<thead class="thead-dark">
+						<tr>
+							<th scope="col">Tweet</th>
+							<th scope="col">Sentiment</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>Hashtag</td>
+							<td>sentiment</td>
+						</tr>
+						<tr>
+							<td>Hashtag</td>
+							<td>sentiment</td>
+						</tr>
+						<tr>
+							<td>Hashtag</td>
+							<td>sentiment</td>
+						</tr>
+					</tbody>
+				</table>
+				<!--
+				{% if submitbutton == "submit" %}
+															<table border="1" class="table table-hover">
+																	<thead class="thead-dark">
+																			<tr>
+																					<th scope="col">Tweet</th>
+																					<th scope="col">Sentiment</th>
+																			</tr>
+																	</thead>
+							{% for tweet in tweets %}
+																		<tbody>
+																				<tr>
+									<td>{{ tweet.user.screen_name }}</td>
+															<td>{{ tweet.full_text }}</td>
+																				</tr>
+																		</tbody>
+							{% endfor %}
+															</table>
+				{% endif %} -->
+			</div>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+		<style type="text/css">
+		.bg{
+		background-color: black;
+		}
+		.home {
+		border-color: #9370DB;
+		color: #00acee;
+		border-radius: 10px;
+		transition: all 0.4s ease 0s;
+		}
+		.home:hover {
+		border-color: white;
+		background-color: #9370DB;
+		color: white;
+		letter-spacing: 3px;
+		}
+			.default {
+		border-color: #00acee;
+		color: #00acee;
+		border-radius: 10px;
+		transition: all 0.4s ease 0s;
+		}
+		.default:hover {
+		border-color: white;
+		background-color: #00acee;
+		color: white;
+		letter-spacing: 3px;
+		}
+		.insta{
+		border-color: #c13584;
+		color: #c13584;
+		border-radius: 10px;
+		transition: all 0.4s ease 0s;
+		}
+		.insta:hover{
+		border-color: white;
+		background-color: #c13584;
+		color: white;
+		letter-spacing: 3px;
+		}
+		.fb{
+		border-color:  #3b5998;
+		color:  #3b5998;
+		border-radius: 10px;
+		transition: all 0.4s ease 0s;
+		}
+		.fb:hover{
+		border-color: white;
+		background-color: #3b5998;
+		color: white;
+		letter-spacing: 3px;
+		}
+		.a:hover {
+		text-decoration: none
+		}
+		</style>
+		<title>About page</title>
+	</head>
+	<body class="bg">
+		<h1 style="color: white">About us</h1>
+		<div class="container">
+			<h3 style="color: orange">&nbsp;&nbsp;&nbsp;<span class="fa fa-users" style="color: white"></span>&nbsp;House Gryffindor</h3>
+			<h3 style="color: white">&nbsp;&nbsp;&nbsp;<span class="fa fa-envelope" style="color: white"></span>&nbsp;E-mail : <a href="">socialsentiment0@gmail.com</a></h3>
+			<div class="btn">
+				<a href="{% url 'index:home' %}" class="link"><button type="button" class="btn home">Home page&nbsp;<span class="fa fa-home"></span></button></a>
+			</div>
+			<div class="btn">
+				<a href="{% url 'index:twitter' %}" class="link"><button type="button" class="btn default">Twitter&nbsp;<span class="fa fa-twitter"></span></button></a>
+			</div>
+			<div class="btn">
+				<a href="{% url 'index:instagram' %}" class="link"><button type="button" class="btn insta">Instagram&nbsp;<span class="fa fa-instagram"></span></button></a>
+			</div>
+			<div class="btn">
+				<a href="{% url 'index:facebook' %}" class="link"><button type="button" class="btn fb">Facebook&nbsp;<span class="fa fa-facebook"></span></button></a>
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,8 @@
+Django>=3.2
+scikit-learn>=0.24
+nltk>=3.5
+tweepy>=4.0
+matplotlib>=3.3
+numpy>=1.19
+pandas>=1.2
+InstagramAPI

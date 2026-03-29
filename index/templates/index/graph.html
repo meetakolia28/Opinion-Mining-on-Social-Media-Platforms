@@ -1,0 +1,72 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+		<title>Result Graph</title>
+		<style type="text/css">
+			.bg{
+			 background-color: white;
+		<!--	 background-image: url("{% static 'bg2.jpg' %}"); -->
+			}
+		.hovereffect {
+		float:left;
+		left: 350px;
+		position:relative;
+		text-align:center;
+		cursor:default;
+		}
+		.hovereffect img {
+		display:block;
+		position:relative;
+		-webkit-transition:all .4s linear;
+		transition:all .4s linear;
+		}
+		
+		.hovereffect:hover img {
+		-ms-transform:scale(1.2);
+		-webkit-transform:scale(1.2);
+		transform:scale(1.2);
+		}
+		.footer {
+		position: fixed;
+		left: 600px;
+		bottom: 0;
+		width: 30%;
+		}
+		.default {
+		border-color: #00acee;
+		color: #00acee;
+		border-radius: 10px;
+	
+		}
+		.default:hover {
+		border-color: white;
+		background-color: #00acee;
+		color: white;
+		
+		}
+		</style>
+		
+	</head>
+	<body class="bg">
+		<p><h1 style="color: black">&nbsp;&nbsp;Analysis Result</h1></p>
+		<div class="container">
+			<div class="hovereffect">
+				<br><br>
+				<img class="img-responsive" style="width : 450px; height: 350px" src="{% static 'E:/Python/omosmp/static/pie.png' %}" alt="Result">
+			</div>
+
+		</div>
+<!--		<div class="footer">
+			<div class="btn">
+				<a href="{% url 'index:twitter' %}" class="link"><button type="button" class="btn default">Back to Twitter Analysis&nbsp;<span class="fa fa-twitter"></span></button></a>
+			</div>
+		</div> -->
+	</body>
+
+</html>

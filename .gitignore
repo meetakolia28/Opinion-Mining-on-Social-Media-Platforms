@@ -1,0 +1,42 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Django stuff:
+*.log
+*.pot
+*.pyc
+*.pyo
+*.pyd
+db.sqlite3
+*.sqlite3
+
+# If you use Django migrations and want to ignore all but __init__.py
+# index/migrations/*.py
+# !index/migrations/__init__.py
+
+# Media/static files (if generated or uploaded)
+media/
+staticfiles/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints
+
+# Environment variables and config
+.env
+config.py
+
+# Model/data files
+*.pickle
+*.pkl
+
+# VS Code settings
+.vscode/
+
+# MacOS/Windows system files
+.DS_Store
+Thumbs.db

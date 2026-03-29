@@ -1,0 +1,159 @@
+
+
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+			<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+				<meta name="viewport" content="width=device-width, initial-scale=1">
+					<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+					<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+					<title>Home</title>
+				</head>
+				<style media="screen">
+				header {
+position: relative;
+background-color: black;
+height: 75vh;
+min-height: 25rem;
+width: 100%;
+overflow: hidden;
+}
+
+header video {
+	position: fixed;
+ right: 0;
+ bottom: 0;
+ min-width: 100%;
+ min-height: 100%;
+
+}
+
+header .container {
+position: relative;
+z-index: 2;
+}
+
+header .overlay {
+position: fixed;
+top: 0;
+left: 0;
+height: 100%;
+width: 100%;
+background-color: black;
+opacity: 0.5;
+z-index: 1;
+}
+.default {
+  border-color: #00acee;
+  color: #00acee;
+	border-radius: 10px;
+	transition: all 0.4s ease 0s;
+}
+.default:hover {
+  border-color: white;
+	background-color: #00acee;
+  color: white;
+	letter-spacing: 3px;
+}
+.insta{
+	border-color: #c13584;
+  color: #c13584;
+	border-radius: 10px;
+	transition: all 0.4s ease 0s;
+}
+.insta:hover{
+	border-color: white;
+	background-color: #c13584;
+	color: white;
+	letter-spacing: 3px;
+}
+.fb{
+	border-color:  #3b5998;
+  color:  #3b5998;
+	border-radius: 10px;
+	transition: all 0.4s ease 0s;
+}
+.fb:hover{
+	border-color: white;
+	background-color: #3b5998;
+	color: white;
+	letter-spacing: 3px;
+}
+.a:hover {
+	text-decoration: none
+}
+
+				</style>
+				<body class="bg">
+					<header>
+  <div class="overlay"></div>
+  <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
+    <source src="https://storage.googleapis.com/coverr-main/mp4/Mt_Baker.mp4" type="video/mp4">
+  </video>
+	<nav class="navbar navbar-fixed-top">
+		<div class="container">
+			<a href="#" class="navbar-brand navbar-left">
+				<i class="fa fa-line-chart" style="font-size:22px"></i>&nbsp;Opinion Mining&nbsp;<i class="fa fa-pie-chart" style="font-size:22px"></i>
+			</a>
+			<ul class="nav nav navbar-right">
+				<li class="nav-item">
+					<a href="{% url 'index:home' %}" class="nav-link">Home <span class="fa fa-home"></span></a>
+				</li>
+				<li class="nav-item">
+					<a href="{% url 'index:about' %}" class="nav-link">About us&nbsp;<span class="fa fa-globe"></span></a>
+				</li>
+				<li class="nav-item">
+					<a href="https://www.google.com/" target="_blank" class="nav-link">Google
+						<span class="fa fa-search"></span>
+					</a>
+				</li>
+				<span>&nbsp;&nbsp;</span>
+				<li class="nav-item">
+					<a href="https://www.twitter.com/" target="_blank" class="nav-link">Twitter
+						<span class="fa fa-twitter"></span>
+					</a>
+				</li>
+				<span>&nbsp;&nbsp;</span>
+				<li class="nav-item">
+					<a href="https://www.instagram.com/" target="_blank" class="nav-link">Instagram
+						<span class="fa fa-instagram"></span>
+					</a>
+				</li>
+				<span>&nbsp;&nbsp;</span>
+				<li class="nav-item">
+					<a href="https://www.facebook.com/" target="_blank" class="nav-link">Facebook
+						<span class="fa fa-facebook"></span>
+					</a>
+				</li>
+			</ul>
+		</div>
+	    </nav>
+			<div class="container h-100">
+    <div class="d-flex h-100 text-center align-items-center">
+      <div class="w-100 text-white">
+        <h1 class="display-3">Let's Start</h1>
+        <p class="lead mb-0">With opinion mining on Social media Platforms</p>
+				<p>
+			<!-- Search Button -->
+			<div class="container3">
+					<div class="btn">
+							<a href="{% url 'index:twitter' %}" class="link"><button type="button" class="btn default">Twitter&nbsp;<span class="fa fa-twitter"></span></button></a>
+					</div>
+					<div class="btn">
+							<a href="{% url 'index:instagram' %}" class="link"><button type="button" class="btn insta">Instagram&nbsp;<span class="fa fa-instagram"></span></button></a>
+					</div>
+					<div class="btn">
+						<a href="{% url 'index:facebook' %}" class="link"><button type="button" class="btn fb">Facebook&nbsp;<span class="fa fa-facebook"></span></button></a>
+					</div>
+			</div>
+	</p>
+      </div>
+
+    </div>
+  </div>
+</header>
+	</body>
+</html>
